@@ -1,6 +1,8 @@
 // ChartComponent.js
 import React from "react";
 import { Line } from "react-chartjs-2";
+import { PageContainer } from "@keystone-6/core/admin-ui/components";
+import { Heading } from "@keystone-ui/core";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -58,9 +60,11 @@ const ChartComponent = () => {
   };
 
   return (
-    <div style={{ width: "600px" }}>
-      <Line data={data} options={options} />
-    </div>
+    <PageContainer header={<Heading type="h3">Charts</Heading>}>
+      <div style={{ width: "600px" }}>
+        <Line data={data} options={options} />
+      </div>
+    </PageContainer>
   );
 };
 
